@@ -1,0 +1,46 @@
+<!-- <button (click)="getProductData()">get product data</button>
+
+@for(product of products; track product){
+<h2>{{ product.name }}, {{ product.brand }}, {{ product.price }}</h2>
+}
+
+<ul>
+  @for(product of productList;track product.id){
+  <li><b>Name: </b>{{ product.title }}</li>
+  <li><b>PriceL: </b>{{ product.price }}</li>
+  <li><b>Rating: </b>{{ product.rating }}</li>
+  <li><b>category: </b>{{ product.category }}</li>
+  <li><img src="{{product.thumbnail}}" alt=""></li>
+  <br />
+  }
+</ul> -->
+
+<form action="" #userForm="ngForm" (ngSubmit)="addUser(userForm.value)">
+  <input type="text" placeholder="enter name" name="name" [ngModel]="selectedUser?.name" />
+  <br /><br />
+  <input type="text" placeholder="enter email" email name="email" [ngModel]="selectedUser?.email" />
+  <br /><br />
+  <input type="text" placeholder="enter name" name="age" [ngModel]="selectedUser?.age" />
+  <br /><br />
+  @if(!selectedUser){
+    <button >Add User</button>
+  }
+  @else{
+    <button>Update User</button>
+  }
+  
+  
+</form>
+
+
+<ul>
+  @for(user of users;track user.id){
+    <li>{{user.id}}</li>
+    <li>{{user.name}}</li>
+    <li>{{user.email}}</li>
+    <li>{{user.age}}</li>
+    <li><button (click)=deleteUser(user.id) >Delete</button></li>
+    <li><button (click)=selectUser(user.id) >Update</button></li>
+    <br>
+  }
+</ul>

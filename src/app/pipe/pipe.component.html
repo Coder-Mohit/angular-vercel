@@ -1,0 +1,21 @@
+<h1>Pipes in Angular</h1>
+<h2>{{title}}</h2>
+<h2>{{title | uppercase}}</h2>
+<h2>{{title | titlecase}}</h2>
+<h2>{{title | lowercase}}</h2>
+
+<h2>{{date | date}}</h2>
+<h2>{{date | date:'fullDate'}}</h2>
+<h2>{{date | date:'hh:mm:ss'}}</h2>
+
+
+<h2>{{amount | currency }}</h2>
+<h2>{{amount | currency:'EUR'}}</h2>
+<h2>{{amount | currency:'INR'}}</h2>
+
+<h2>{{title | slice:0:10}}</h2> <!-- like array slice -->
+
+
+<h2>{{amount | currencyConvertor}}</h2>
+<h2>{{amount | currencyConvertor:12}}</h2>
+<h2>{{5 | currencyConvertor:32}}</h2>
